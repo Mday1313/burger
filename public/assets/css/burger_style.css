@@ -1,0 +1,24 @@
+.jumbotron {
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+ul {
+    text-align: left;
+}
+
+.change-staus {
+    margin: 20px;
+}
+
+h2 {
+    padding: 30px;
+    color: peru;
+}
+
+.card {
+    margin: 5px;
+}

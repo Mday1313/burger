@@ -1,27 +1,39 @@
 
+<div class="container">
 
-{{burgerObject}}
+<div class="jumbotron">
+
+<h1>YUMMY BURGERS!</h1>
+</div>
 
 
 
+<div class="row">
 
-<h1>Burgers!</h1>
-
-<h2>YUMMY BURGERS!</h2>
+<div class="card col-5">
+<h2>Eat Me!!</h2>
 
 <ul>
   {{#each burgers}}
   <li>
     <p>
-      {{this.id}}. {{this.burger_name}}
+      {{this.id}}.  {{this.burger_name}}     
 
-      <button data-movieid="{{this.id}}" class="delplan">Devour!!</button>
+      <button data-id="{{id}}" data-newstatus="{{devoured}}" class="change-status">Devour!!</button>
     </p>
   </li>
   {{/each}}
 </ul>
 
+</div>
+<div class="card col-5">
+  <h2>In Your Belly!</h2>
+</div>
 
+
+</div>
+<div class="row">
+<div class="card col-12">
 
 <h2>Add a Burger</h2>
 <form class="create-form">
@@ -39,3 +51,11 @@
 
   <button type="submit">Add Burger</button>
 </form>
+</div>
+
+</div>
+
+
+
+
+</div>
