@@ -9,8 +9,8 @@ var burger = require("../models/burger.js");
 // GET PUT POST Routes
 
 
-router.get("/", function(req, res) {
-  burger.all(function(data) {
+router.get("/", function (req, res) {
+  burger.all(function (data) {
     var hbsObject = {
       burgers: data
     };
@@ -19,29 +19,29 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/api/burgers", function(req, res) {
+router.post("/api/burgers", function (req, res) {
   burger.create([
-    "burger_name", "devoured"
+    "burger_name"
   ], [
-    req.body.name, req.body.devoured
-  ], function(result){
-    res.json({ id: result.insertId });
-  });
+      req.body.name, req.body.devoured
+    ], function (result) {
+      res.json({ id: result.insertId });
+    });
 });
 
-router.put("/api/burgers/:id", function(req,res){
+router.put("/api/burgers/:id", function (req, res) {
   var condition = "id = " + req.params.id;
-  
-  console.log("condition", condition + " devour status "+ req.body.devoured);
+
+  console.log("condition", condition + " devour status " + req.body.devoured);
   burger.update({
     devoured: req.body.devoured
-  }, condition, function(result) {
-    if (result.changedRows == 0){
+  }, condition, function (result) {
+    if (result.changedRows == 0) {
       return res.status(404).end();
     } else {
       res.status(200).end();
     }
-    
+
   });
 });
 

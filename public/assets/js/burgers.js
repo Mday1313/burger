@@ -3,9 +3,9 @@ $(function () {
     $(".change-status").on("click", function (event) {
         var id = $(this).data("id");
         var newDevour = $(this).data("newstatus");
-console.log(newDevour);
+        console.log(newDevour);
         var newDevourStatus = {
-            devoured: newDevour
+            devoured: true
         };
 
         $.ajax("/api/burgers/" + id, {
@@ -23,8 +23,8 @@ console.log(newDevour);
         event.preventDefault();
 
         var newBurger = {
-            name: $("#ca").val().trim(),
-            devoured: $("[name=devoured]:checked").val()
+            name: $("#ca").val().trim()
+
         };
 
         $.ajax("/api/burgers", {
