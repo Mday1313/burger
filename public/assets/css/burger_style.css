@@ -27,7 +27,7 @@ h2 {
     color: peru;
 }
 
-
+/* Burger Animation */
 #burger-image{
   background:#fcfbfb;
   border:5px solid #c5d8d6;
@@ -66,7 +66,7 @@ span.hamburger{
 }
 span.hamburger.bun{
   background:#af9a71;
-  height:7px;
+  height:10px;
 }
 
 .top:before{
@@ -106,33 +106,45 @@ span.hamburger.chez{
   -webkit-animation-timing-function: ease-in-out;
 }
 
-span.hamburger.meet{
+span.hamburger.meat{
   background:#5b2e10;
   margin:0 auto 0 auto;
-  animation-name: rotate-meet;
+  animation-name: rotate-meat;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  -webkit-animation-name: rotate-meet;
+  -webkit-animation-name: rotate-meat;
   -webkit-animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
 }
 
-span.hamburger.lettus{
+span.hamburger.lettuce{
   background:#58b734;
   height:3px;
   margin:1px auto 4px auto;
-  animation-name: rotate-lettus;
+  animation-name: rotate-lettuce;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  -webkit-animation-name: rotate-lettus;
+  -webkit-animation-name: rotate-lettuce;
   -webkit-animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
 }
-
+span.hamburger.tomato{
+  background:#e71414;
+  height:3px;
+  margin:1px auto 4px auto;
+  animation-name: rotate-tomato;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: rotate-tomato;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+}
 span.hamburger.bottom{
   animation-name: rotate-bun-bottom;
   animation-duration: 3s;
@@ -195,7 +207,7 @@ span.hamburger.bottom{
   100% { -webkit-transform: translate(0, 150px) rotate(45deg); width:40px; height:2px; }
 }
 
-@keyframes rotate-meet{
+@keyframes rotate-meat{
   0% { transform: translate(0px, -100px) rotate(-90deg) ; width:40px; height:7px; }
   15% { transform: translate(0px, -100px) rotate(90deg) ; width:40px; height:7px; }
   17% { transform: translate(0, -20px) rotate(-45deg); width:40px; height:7px; }
@@ -207,7 +219,7 @@ span.hamburger.bottom{
   100% { transform: translate(0, 150px) rotate(45deg); width:40px; height:7px; }
 }
 
-@-webkit-keyframes rotate-meet{
+@-webkit-keyframes rotate-meat{
   0% { -webkit-transform: translate(0px, -100px) rotate(-90deg) ; width:40px; height:7px; }
   15% { -webkit-transform: translate(0px, -100px) rotate(90deg) ; width:40px; height:7px; }
   17% { -webkit-transform: translate(0, -20px) rotate(-45deg); width:40px; height:7px; }
@@ -219,7 +231,7 @@ span.hamburger.bottom{
   100% { -webkit-transform: translate(0, 150px) rotate(45deg); width:40px; height:7px; }
 }
 
-@keyframes rotate-lettus{
+@keyframes rotate-lettuce{
   0% { transform: translate(0px, -100px) rotate(90deg) ; width:40px; height:3px; }
   10% { transform: translate(0px, -100px) rotate(90deg) ; width:40px; height:3px; }
   12% { transform: translate(0, -20px) rotate(45deg); width:40px; height:3px; }
@@ -231,7 +243,29 @@ span.hamburger.bottom{
   100% { transform: translate(0, 150px) rotate(45deg); width:40px; height:3px; }
 }
 
-@-webkit-keyframes rotate-lettus{
+@-webkit-keyframes rotate-lettuce{
+  0% { -webkit-transform: translate(0px, -100px) rotate(90deg) ; width:40px; height:3px; }
+  10% { -webkit-ransform: translate(0px, -100px) rotate(90deg) ; width:40px; height:3px; }
+  17% { -webkit-transform: translate(0); width:42px; height:1px; }
+  20% { -webkit-transform: translate(0); width:40px; height:3px; }
+  22% { -webkit-transform: translate(0) rotate(0deg); rotate(0deg);width:40px; height:3px; }
+  85% { -webkit-transform: translate(0) rotate(0deg);width:40px; height:3px; }
+  92% { -webkit-transform: translate(0, 20px) rotate(10deg); width:40px; height:3px; }
+  100% { -webkit-transform: translate(0, 150px) rotate(45deg); width:40px; height:3px; }
+}
+@keyframes rotate-tomato{
+  0% { transform: translate(0px, -100px) rotate(90deg) ; width:40px; height:3px; }
+  10% { transform: translate(0px, -100px) rotate(90deg) ; width:40px; height:3px; }
+  12% { transform: translate(0, -20px) rotate(45deg); width:40px; height:3px; }
+  17% { transform: translate(0); width:42px; height:1px; }
+  20% { transform: translate(0); width:40px; height:3px; }
+  22% { transform: translate(0) rotate(0deg); rotate(0deg);width:40px; height:3px; }
+  85% { transform: translate(0) rotate(0deg);width:40px; height:3px; }
+  92% { transform: translate(0, 20px) rotate(10deg); width:40px; height:3px; }
+  100% { transform: translate(0, 150px) rotate(45deg); width:40px; height:3px; }
+}
+
+@-webkit-keyframes rotate-tomato{
   0% { -webkit-transform: translate(0px, -100px) rotate(90deg) ; width:40px; height:3px; }
   10% { -webkit-ransform: translate(0px, -100px) rotate(90deg) ; width:40px; height:3px; }
   17% { -webkit-transform: translate(0); width:42px; height:1px; }
